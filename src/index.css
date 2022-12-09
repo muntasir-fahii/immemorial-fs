@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@200;300;400;500;600;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap");
+
+:root {
+  --color-primary: #d53f41;
+  --color-dark: #626262;
+  --color-darker: #464646;
+  --color-light: #dbd8d6;
+  --color-lighter: #f5f0ec;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 1px;
+  background-color: var(--color-lighter);
+  color: var(--color-darker);
+}
+.wrapper {
+  margin: 0 5vw;
+}
+
+section {
+  padding: 10vw 0;
+}
+
+.min-height-100vh {
+  min-height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem 0;
+  font-family: "Syncopate", sans-serif;
+  font-size: 1.5rem;
+  text-transform: lowercase;
+}
+
+.links,
+.fav-link {
+  font-weight: 700;
+}
+
+.links a,
+.fav-link a {
+  color: var(--color-dark);
+  position: relative;
+}
+.links a::after,
+.fav-link a::after {
+  content: "";
+  width: 0%;
+  height: 0.2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--color-primary);
+  transition: 0.5s;
+}
+
+.links a:hover::after,
+.fav-link a:hover::after {
+  width: 120%;
+}
+
+.logo a {
+  color: var(--color-darker);
+}
+
+.hero {
+  font-family: "Bai Jamjuree", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 10vw;
+  line-height: 1.2;
+  min-height: 100vh;
+  color: var(--color-darker);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.ethereal,
+.canvas {
+  position: relative;
+}
+
+.ethereal span,
+.canvas span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-lighter);
+}
