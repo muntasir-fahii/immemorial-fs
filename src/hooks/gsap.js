@@ -42,7 +42,7 @@ export const useGsapDownStagger = (arr, delay = 0) => {
         opacity: 1,
         duration: 1.5,
         stagger: 0.1,
-        ease: Expo.easeInOut,
+        ease: Expo.easeIn,
         delay: delay,
       }
     );
