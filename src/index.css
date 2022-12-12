@@ -43,7 +43,7 @@ body {
 }
 
 section {
-  padding: 10vw 0;
+  padding: 8vw 0;
 }
 
 .min-height-100vh {
@@ -154,14 +154,14 @@ section {
   grid-row: 3;
 }
 .photo.three {
-  grid-column: 2;
-  grid-row: 2;
+  grid-column: 1;
+  grid-row: 4;
 }
 .photo.four {
-  grid-column: 5;
-  grid-row: 2;
+  grid-column: 3;
+  grid-row: 5;
 }
 .photo.five {
   grid-column: 7;
-  grid-row: 5;
+  grid-row: 3;
 }

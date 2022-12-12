@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import gsap, { Expo } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { getAllByDisplayValue } from "@testing-library/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -44,6 +43,28 @@ export const useGsapDownStagger = (arr, delay = 0) => {
         stagger: 0.1,
         ease: Expo.easeIn,
         delay: delay,
+      }
+    );
+  }, []);
+};
+
+export const useGsapPhotoDropping = (arr) => {
+  useEffect(() => {
+    const el = arr.map((item) => item.current);
+
+    gsap.fromTo(
+      el,
+      {
+        y: "-100vh",
+        scale: 0,
+      },
+      {
+        y: 0,
+        scale: 1,
+        duration: 2,
+        stagger: 0.2,
+        delay: 2.7,
+        ease: Expo.easeInOut,
       }
     );
   }, []);
