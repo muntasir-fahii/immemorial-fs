@@ -80,7 +80,7 @@ export const useGsapPhotoLevitate = (arr, trig) => {
         y: 0,
       },
       {
-        y: "-40%",
+        y: "-30%",
         ease: Expo.easeInOut,
         scrollTrigger: {
           trigger: trig.current,
