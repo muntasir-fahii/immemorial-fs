@@ -1,5 +1,9 @@
 import { useRef } from "react";
-import { useGsapShutterUnveil, useGsapPhotoDropping } from "../hooks/gsap";
+import {
+  useGsapShutterUnveil,
+  useGsapPhotoDropping,
+  useGsapPhotoLevitate,
+} from "../hooks/gsap";
 
 const Hero = () => {
   const heroRef = useRef(null);
@@ -17,6 +21,7 @@ const Hero = () => {
   useGsapShutterUnveil(shutter1, 0, heroRef);
   useGsapShutterUnveil(shutter2, 0.2, heroRef);
   useGsapPhotoDropping(photosArr);
+  useGsapPhotoLevitate(photosArr, heroRef);
   return (
     <section className="hero wrapper" ref={heroRef}>
       <h1 className="ethereal">

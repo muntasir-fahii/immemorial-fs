@@ -69,3 +69,25 @@ export const useGsapPhotoDropping = (arr) => {
     );
   }, []);
 };
+
+export const useGsapPhotoLevitate = (arr, trig) => {
+  useEffect(() => {
+    const el = arr.map((item) => item.current);
+
+    gsap.fromTo(
+      el,
+      {
+        y: 0,
+      },
+      {
+        y: "-40%",
+        ease: Expo.easeInOut,
+        scrollTrigger: {
+          trigger: trig.current,
+          scrub: 1,
+          toggleActions: "play reverse play reverse",
+        },
+      }
+    );
+  }, []);
+};
