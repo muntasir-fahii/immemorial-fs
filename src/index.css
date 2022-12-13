@@ -46,6 +46,14 @@ section {
   padding: 10vw 0;
 }
 
+.section-title {
+  font-family: "syncopate", sans-serif;
+  font-size: 1.5rem;
+  padding-bottom: 5vh;
+  text-transform: lowercase;
+  color: var(--color-primary);
+}
+
 .min-height-100vh {
   min-height: 100vh;
 }
@@ -164,4 +172,41 @@ section {
 .photo.five {
   grid-column: 7;
   grid-row: 3;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: 30% auto;
+  align-items: center;
+  gap: 10rem;
+}
+
+.feature-text {
+  letter-spacing: 5px;
+  font-weight: 500;
+}
+
+.features img {
+  width: 100%;
+}
+
+.feature-l,
+.feature-r {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+}
+
+.feature-shutter-l,
+.feature-shutter-r {
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-lighter);
 }
