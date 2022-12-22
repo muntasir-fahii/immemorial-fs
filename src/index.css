@@ -4,6 +4,8 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600;700;800;900&display=swap");
+
 :root {
   --color-primary: #d53f41;
   --color-dark: #626262;
@@ -69,17 +71,17 @@ section {
 }
 
 .links,
-.fav-link {
+.blog-link {
   font-weight: 700;
 }
 
 .links a,
-.fav-link a {
+.blog-link a {
   color: var(--color-dark);
   position: relative;
 }
 .links a::after,
-.fav-link a::after {
+.blog-link a::after {
   content: "";
   width: 0%;
   height: 0.2rem;
@@ -92,7 +94,7 @@ section {
 }
 
 .links a:hover::after,
-.fav-link a:hover::after {
+.blog-link a:hover::after {
   width: 120%;
 }
 
@@ -209,4 +211,71 @@ section {
   right: 0;
   bottom: 0;
   background-color: var(--color-lighter);
+}
+.about p {
+  font-size: 3vw;
+  line-height: 1.5;
+}
+.about p:last-child {
+  margin-top: 3vw;
+}
+
+.gallery .section-title {
+  margin-left: 5vw;
+}
+
+.gallery-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 10vw;
+  padding: 10vw;
+  background-color: var(--color-primary);
+}
+
+.gallery-item {
+  position: relative;
+  width: 50%;
+}
+
+.gallery-item-title {
+  position: absolute;
+  top: 10%;
+  left: -50%;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 8vw;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--color-lighter);
+  z-index: 1;
+  mix-blend-mode: color-dodge;
+}
+
+.gallery-item-category {
+  position: absolute;
+  left: 0;
+  bottom: -5%;
+  text-transform: uppercase;
+  color: var(--color-lighter);
+  letter-spacing: 10px;
+  z-index: 1;
+}
+
+.gallery-item-img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.footer {
+  text-align: center;
+}
+
+.footer h1 {
+  font-family: "Bodoni Moda", serif;
+  font-size: 10vw;
+  text-transform: lowercase;
+  color: var(--color-primary);
 }
